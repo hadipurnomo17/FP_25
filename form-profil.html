@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app=''>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/icon/css/font-awesome.min.css">
-
+    <script type="text/javascript" src="assets/js/angular.js"></script>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -25,10 +25,16 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                HOME
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="form-profil.html">PROFIL</a>
+                <a class="dropdown-item" href="help.html">HELP</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">ABOUT US</a>
@@ -39,14 +45,14 @@
             <li class="nav-item">
               <a class="nav-link" href="contact-us.html">CONTACT</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">KATEGORI</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="form-profil.html">PROFIL</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="help.html">HELP</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                KATEGORI
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Universitas</a>
+                <a class="dropdown-item" href="#">STMIK</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -67,7 +73,7 @@
         <h4 class="Text-center"> Form Profil</h4>
   <div class="row">
     <div class="col">
-    <form>
+    <form name="login">
   <div class="form-group">
     <label for="exampleInputEmail1">Edit your setting</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -75,13 +81,15 @@
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input ng-attr-type="{{ showPassword ? 'text' : 'password' }}" class="form-control" id="exampleInputPassword1" placeholder=""><br>
+    <input type="checkbox" name="showPassword" ng-model="showPassword">
+    <label>show password</label>
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1"></label>
   </div>
-  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="submit" class="btn btn-primary" >Save</button>
 </form>
     </div>
     <div class="col">

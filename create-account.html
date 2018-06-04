@@ -17,7 +17,7 @@
     <!-- Your code here -->
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand mb-0 h1" href="index.html">INFO KAMPUS</a>
+        <a class="navbar-brand mb-0 h1" href="#">INFO KAMPUS</a>
         <!-- <a class="navbar-brand mb-0 h1" href="#">
           <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
         </a> -->
@@ -25,22 +25,34 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                HOME
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="form-profil.html">PROFIL</a>
+                <a class="dropdown-item" href="help.html">HELP</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT US</a>
+              <a class="nav-link" href="about-us.html">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">TOP 10</a>
+              <a class="nav-link" href="top-ten.html">TOP 10</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
+              <a class="nav-link" href="contact-us.html">CONTACT</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">KATEGORI</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                KATEGORI
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Universitas</a>
+                <a class="dropdown-item" href="#">STMIK</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -55,10 +67,59 @@
     <!-- Content -->
     <div class="container">
       <!-- Your content -->
-      <h2 class="text-center">Contact Us</h2>
-      <p class="text-center">Lihat opsi dukungan lain dihalaman ini, atau hubungi kami secara online dengan permintaan khusus anda</p>
-    </div>
+      <h1>Create Account</h1>
 
+<form>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Username</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Verifikasi Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Nama Lengkap</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Nomor HP</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+  </div>
+
+
+
+
+
+
+
+
+
+    </div>
     <!-- End Content -->
 
     <!-- Footer -->
@@ -79,7 +140,7 @@
           </div>
           <div class="col">
             <h4>Follow Us</h4>
-     v       <div class="social-icon">
+            <div class="social-icon">
               <a href="https://facebook.com" target="_blank" class="text-dark"><i class="fa fa-facebook" aria-hidden="true"></i></a>
               <a href="#" class="text-dark" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
               <a href="#" class="text-dark" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
